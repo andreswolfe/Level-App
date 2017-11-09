@@ -1,0 +1,42 @@
+# do not touch this line
+configVersion: 2
+
+description: Tells you if a surface is level
+keywords: 'level, gyroscope'
+name: Level
+shortName: Level
+displayName: Level
+sensors:
+ - gyroscope
+
+screens:
+ - - digit
+   - digit2
+ - - digit3
+dataTypes:
+  monitor:
+    isLevel: boolean
+    pitchVal: float
+    rollVal: float
+widgets:
+  digit:
+    display: digit
+    type: monitor
+    format: round
+    keys: pitchVal
+    realtime: true
+    label: Pitch
+  digit2:
+    display: digit
+    type: monitor
+    format: round
+    keys: rollVal
+    realtime: true
+    label: Roll
+  digit3:
+    display: digit
+    type: monitor
+    format: fixed
+    keys: isLevel
+    realtime: true
+    label: Is It Level?
